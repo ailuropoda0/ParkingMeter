@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 def get_api_data(method=""):
     api_url = "https://data.sfgov.org/resource/2iym-9kfb.json"
     url = api_url + '?' + method.replace(" ", "%20")
-    print(url)
     data = urllib.request.urlopen(url).read().decode()
     return json.loads(data)
 
